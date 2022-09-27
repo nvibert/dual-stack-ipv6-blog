@@ -1,0 +1,42 @@
+nicovibert:~$ hubble observe --ipv6 --from-pod pod-worker -o dict --ip-translation=false 
+  TIMESTAMP: Sep  7 15:27:39.902
+     SOURCE: fd00:10:244:1::3203
+DESTINATION: fd00:10:244:3::ba17
+       TYPE: to-overlay
+    VERDICT: FORWARDED
+    SUMMARY: ICMPv6 EchoReply
+------------
+  TIMESTAMP: Sep  7 15:27:46.111
+     SOURCE: fd00:10:244:3::ba17
+DESTINATION: fd00:10:244:1::3203
+       TYPE: to-endpoint
+    VERDICT: FORWARDED
+    SUMMARY: ICMPv6 EchoRequest
+------------
+  TIMESTAMP: Sep  7 15:27:46.111
+     SOURCE: fd00:10:244:1::3203
+DESTINATION: fd00:10:244:3::ba17
+       TYPE: to-overlay
+    VERDICT: FORWARDED
+    SUMMARY: ICMPv6 EchoReply
+------------
+  TIMESTAMP: Sep  7 15:28:35.593
+     SOURCE: [fd00:10:244:3::ba17]:48612
+DESTINATION: [fd00:10:244:2::e645]:80
+       TYPE: to-endpoint
+    VERDICT: FORWARDED
+    SUMMARY: TCP Flags: SYN
+------------
+  TIMESTAMP: Sep  7 15:28:35.593
+     SOURCE: [fd00:10:244:3::ba17]:48612
+DESTINATION: [fd00:10:244:2::e645]:80
+       TYPE: to-endpoint
+    VERDICT: FORWARDED
+    SUMMARY: TCP Flags: ACK
+------------
+  TIMESTAMP: Sep  7 15:28:35.594
+     SOURCE: [fd00:10:244:3::ba17]:48612
+DESTINATION: [fd00:10:244:2::e645]:80
+       TYPE: to-endpoint
+    VERDICT: FORWARDED
+    SUMMARY: TCP Flags: ACK, PSH
